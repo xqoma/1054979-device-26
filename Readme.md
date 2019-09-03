@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Dmitry Grigoriev](https://up.htmlacademy.ru/htmlcss/26/user/1054979).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Аверин](https://up.htmlacademy.ru/htmlcss/26/user/1061531).
 
 ---
 
