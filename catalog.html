@@ -5,7 +5,6 @@
     <title>Моноподы для селфи</title>
   </head>
   <body>
-
     <header>
       <nav>
         <a href="index.html" aria-label="Перейти на главную страницу">
@@ -14,7 +13,7 @@
 
         <div>
           <form action="" method="get">
-            <label for="search">Поиск по сайту</label>
+            <label for="search" class="visually-hidden">Поиск по сайту</label>
             <input type="text" id="search" name="q" placeholder="Поиск по сайту">
             <input type="submit" value="Найти">
           </form>
@@ -56,7 +55,7 @@
       <h1>Моноподы для селфи</h1>
       <ul>
         <li><a href="index.html">Главная</a></li>
-        <li><a href="">Каталог товаров</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
         <li>Моноподы для селфи</li>
       </ul>
 
@@ -73,8 +72,8 @@
             </li>
             <li>
               <ul>
-                <li><a href="" aria-label="По возростанию"></a></li>
-                <li><a href="" aria-label="По убыванию"></a></li>
+                <li><a href="">По возростанию</a></li>
+                <li><a href="">По убыванию</a></li>
               </ul>
             </li>
           </ul>
@@ -129,7 +128,7 @@
       </div>
 
       <section>
-        <h2>Список товара</h2>
+        <h2 class="visually-hidden">Список товара</h2>
         <ul>
           <li>
             <h3><a href="">Любительская селфи-палка</a></h3>
@@ -188,7 +187,9 @@
 
     <footer>
       <div>
-        <img src="img/logo.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
+        </a>
         
         <ul>
           <li>
