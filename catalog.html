@@ -84,7 +84,47 @@
       <div>
         <section>
           <h2>Фильтр:</h2>
-          <!-- Форма фильтрации товара -->
+          <form action="" method="get">
+            <fieldset>
+              <legend>Цвет</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" id="filter-color-black" name="color-black" checked>
+                  <label for="filter-color-black">Черный</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="filter-color-white" name="color-white">
+                  <label for="filter-color-white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="filter-color-blue" name="color-blue" checked>
+                  <label for="filter-color-blue">Синий</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="filter-color-red" name="color-red" checked>
+                  <label for="filter-color-red">Красный</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="filter-color-pink" name="color-pink">
+                  <label for="filter-color-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Bluetooth</legend>
+              <ul>
+                <li>
+                  <input type="radio" id="filter-bluetooth-yes" name="bluetooth" value="yes" checked>
+                  <label for="filter-bluetooth-yes">Есть</label>
+                </li>
+                <li>
+                  <input type="radio" id="filter-bluetooth-no" name="bluetooth" value="no">
+                  <label for="filter-bluetooth-no">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <input type="submit" value="Показать">
+          </form>
         </section>
       </div>
 
