@@ -50,3 +50,11 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; /* added line */
 }
+
+.logo:hover[href] {
+  opacity: .6;
+}
+
+.logo:active[href] {
+  opacity: .3;
+}
