@@ -41,6 +41,11 @@ body {
   color: #464646;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .visually-hidden {
   position: absolute !important;
   height: 1px; 
@@ -143,4 +148,95 @@ body {
 .search-form button[type='submit']:active {
   background-color: #000;
   color: rgba(255, 255, 255, .3);
+}
+
+.nav,
+.user-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav {
+  width: 500px;
+}
+
+.user-nav li {
+  margin: 0 19px;
+  height: 49px;
+  line-height: 49px;
+}
+
+.user-nav li:first-child {
+  margin-left: 0;
+}
+
+.user-nav li:last-child {
+  margin-right: 0;
+}
+
+.user-account li {
+  margin: 0 10px;
+}
+
+.user-nav .user-account + li {
+  margin-left: auto; 
+}
+
+.user-nav .icon-before a {
+  padding: 0 0 0 27px;
+}
+
+.user-nav .icon-before {
+  position: relative;
+}
+
+.user-nav .icon-before::before {
+  content: '';
+  position: absolute;
+  bottom: 19px;
+  pointer-events: none;
+}
+
+.user-btn.icon-before::before {
+  left: 0;
+  height: 12px;
+  width: 13px;
+}
+
+.page-header .user-btn.icon-before::before {
+  background: url('../img/user-black.svg') 0 0 no-repeat;
+}
+
+.page-footer .user-btn.icon-before::before {
+  background: url('../img/user-orange.svg') 0 0 no-repeat;
+}
+
+.compare-btn.icon-before::before {
+  left: 7px;
+  height: 10px;
+  width: 10px;
+}
+
+.page-header .compare-btn.icon-before::before {
+  background: url('../img/compare-black.svg') 0 0 no-repeat;
+}
+
+.page-footer .compare-btn.icon-before::before {
+  background: url('../img/compare-orange.svg') 0 0 no-repeat;
+}
+
+.cart-btn.icon-before::before {
+  left: 3px;
+  height: 12px;
+  width: 12px;
+}
+
+.page-header .cart-btn.icon-before::before {
+  background: url('../img/cart-black.svg') 0 0 no-repeat;
+}
+
+.page-footer .cart-btn.icon-before::before {
+  background: url('../img/cart-orange.svg') 0 0 no-repeat;
 }
