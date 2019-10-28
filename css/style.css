@@ -58,9 +58,10 @@ a {
 
 .page-header {
   position: relative;
+  box-sizing: border-box;
   width: 1160px; /* Временное значение, пока не размечена сетка */
   margin-top: 40px;
-  padding: 34px 0 50px;
+  padding: 34px 60px 50px;
   background-color: #f7e296;
 }
 
@@ -69,18 +70,8 @@ a {
   top: -17.5px;
 }
 
-.logo:hover[href],
-.nav a:hover:not(.catalog-link) {
-  opacity: .6;
-}
-
 .nav .catalog-link:hover {
   color: rgba(0, 0, 0, .6);
-}
-
-.logo:active[href],
-.nav a:active:not(.catalog-link) {
-  opacity: .3;
 }
 
 .nav .catalog-link:active {
@@ -190,7 +181,13 @@ a {
 }
 
 .user-nav {
+  align-items: baseline;
   width: 500px;
+  height: 49px;
+}
+
+.user-nav > li {
+  height: auto;
 }
 
 .nav,
@@ -199,9 +196,8 @@ a {
 }
 
 .user-nav li {
-  margin: 0 19px;
-  height: 49px;
-  line-height: 49px;
+  line-height: 21px;
+  margin: auto 19px;
 }
 
 .user-nav li:first-child {
@@ -221,17 +217,17 @@ a {
 }
 
 .user-nav .icon-before {
-  padding-left: 27px;
+  position: relative;
 }
 
-.user-nav .icon-before {
-  position: relative;
+.user-nav .icon-before a {
+  padding-left: 27px;
 }
 
 .user-nav .icon-before::before {
   content: '';
   position: absolute;
-  bottom: 4px;
+  bottom: 5px;
   pointer-events: none;
 }
 
@@ -324,7 +320,8 @@ a {
 ul.catalog-categories {
   display: flex;
   visibility: hidden;
-  padding: 23px 0 32px;
+  box-sizing: border-box;
+  padding: 23px 60px 32px;
 }
 
 .catalog-link:hover + .catalog-categories,
@@ -335,6 +332,7 @@ ul.catalog-categories {
 .catalog-categories,
 .site-nav .add-bg-before::before {
   position: absolute;
+  left: 0;
   bottom: calc(-163px + 50px); /* высота .add-bg-before - margin-bottom page-header'а */
   background-color: #f7e296;
   width: 100%;
