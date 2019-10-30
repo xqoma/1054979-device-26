@@ -440,11 +440,13 @@ ul.catalog-categories {
   width: 100%;
   height: 7px;
   background-color: #f0c42e;
+  transition: height 0s;
 }
 
 .btn:hover::before,
 .btn:active::before {
   height: 100%;
+  transition: height .5s;
 }
 
 .btn:active::before {
@@ -455,9 +457,13 @@ ul.catalog-categories {
   color: #f7e184;
 }
 
+.info {
+  margin-bottom: 81px;
+}
+
 .info section {
   position: relative;
-  padding-top: 50px;
+  padding-top: 52px;
 }
 
 .info section::before {
@@ -471,15 +477,19 @@ ul.catalog-categories {
 }
 
 .info h2 {
-  margin: 0 0 42px;
+  margin: 0 0 43px;
 }
 
 .info p {
   margin: 0 0 30px;
 }
 
+.info .btn {
+  width: 260px;
+}
+
 .info ul {
-  margin: 65px 0;
+  margin: 65px 0 55px;
   padding: 0;
   list-style-type: none;
 }
@@ -487,7 +497,7 @@ ul.catalog-categories {
 .info li {
   display: flex;
   position: relative;
-  padding-left: 35px;
+  padding-left: 36px;
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -502,12 +512,20 @@ ul.catalog-categories {
   box-sizing: border-box;
   width: 8px;
   height: 8px;
-  border: 2px solid #e5e5e5;
+  border: 1.8px solid #e5e5e5;
   border-radius: 50%;
 }
 
-.info .btn {
-  width: 260px;
+.info .map-location {
+  display: block;
+  margin: 40px 0 60px;
+}
+
+.contacts .map {
+  display: block;
+  width: 560px;
+  height: 222px;
+  background-color: #eaeaea;
 }
 
 .page-footer {
