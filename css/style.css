@@ -33,11 +33,10 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  font-weight: 100;
+  letter-spacing: .01em;
   color: #000;
 }
 
@@ -56,13 +55,16 @@ a {
   white-space: nowrap; /* added line */
 }
 
+.stop-margin-collaps {
+  padding-top: .1px;
+}
+
 h1,
 .main-page h2 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 700;
-  letter-spacing: .01em;
 }
 
 .container {
@@ -130,7 +132,7 @@ h1,
   outline: none;
   height: 100%;
   width: auto;
-  padding: 0 20px 0 40px;
+  padding: 0 20px 0 37px;
   color: rgba(70, 70, 70, .3);
 }
 
@@ -169,7 +171,7 @@ h1,
   position: absolute;
   bottom: -2px;
   right: 0;
-  width: 440px;
+  width: 439px;
   border-bottom: 2px solid #000;
   pointer-events: none;
   outline: none;
@@ -215,11 +217,7 @@ h1,
 
 .user-nav li {
   line-height: 26px;
-  margin: auto 19px;
-}
-
-.user-nav li:first-child {
-  margin-left: 0;
+  margin: auto 36px auto 0;
 }
 
 .user-nav li:last-child {
@@ -227,7 +225,7 @@ h1,
 }
 
 .user-account li {
-  margin: 0 10px;
+  margin-right: 20px;
 }
 
 .page-header .user-account + li {
@@ -278,7 +276,7 @@ h1,
 }
 
 .cart-btn.icon-before::before {
-  left: 3px;
+  left: 5px;
   height: 12px;
   width: 12px;
 }
@@ -303,8 +301,12 @@ h1,
   opacity: .3;
 }
 
+.site-nav {
+  margin: 0 -3px 0 -1px;
+}
+
 .site-nav-el {
-  margin: 0 19px;
+  margin: 0 17px;
   height: 24px;
   line-height: 24px;
 }
@@ -315,7 +317,7 @@ h1,
 
 .page-header .site-nav-el:last-child {
   margin-right: 0;
-  margin-left: 95px;
+  margin-left: 91px;
 }
 
 .page-header .site-nav-el:nth-child(2) {
@@ -324,7 +326,7 @@ h1,
 
 .site-nav-lnk {
   display: inline-block;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: .2em;
@@ -333,13 +335,14 @@ h1,
 
 .site-nav .catalog-link {
   position: relative;
-  padding-right: 32px;
+  padding-right: 28px;
 }
 
 .site-nav .catalog-link::after {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   width: 16px;
   height: 16px;
@@ -350,6 +353,7 @@ h1,
 ul.catalog-categories {
   display: flex;
   visibility: hidden;
+  z-index: 1;
   box-sizing: border-box;
   padding: 23px 60px 32px;
 }
@@ -420,7 +424,7 @@ ul.catalog-categories {
   display: inline-block;
   position: relative;
   z-index: 1;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: .2em;
@@ -460,6 +464,146 @@ ul.catalog-categories {
 
 .btn.active-black:active {
   color: #f7e184;
+}
+
+.promo-slider {
+  position: relative;
+}
+
+.slider-controls {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-controls .control {
+  position: relative;
+  box-sizing: border-box;
+  margin-right: 21px;
+  width: 12px;
+  height: 12px;
+  background: url('../img/promo-slider-button-empty.svg') no-repeat;
+}
+
+.slider-controls .control:last-child {
+  margin-right: 0;
+}
+
+#toggle-slide1:checked ~ .slider-controls .control:nth-child(1),
+#toggle-slide2:checked ~ .slider-controls .control:nth-child(2),
+#toggle-slide3:checked ~ .slider-controls .control:nth-child(3) {
+  background-image: url('../img/promo-slider-button.svg');
+}
+
+.slider-controls label {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.promo-slider .slides {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#toggle-slide1:not(:checked) ~ .slides .slide:nth-child(1),
+#toggle-slide2:not(:checked) ~ .slides .slide:nth-child(2),
+#toggle-slide3:not(:checked) ~ .slides .slide:nth-child(3) {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.promo-slider .slide::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 179.2px;
+  letter-spacing: .01em;
+  line-height: 179.2px;
+  color: #fff;
+}
+
+.promo-slider .slide:nth-child(1)::before {
+  content: '01';
+}
+
+.promo-slider .slide:nth-child(2)::before {
+  content: '02';
+}
+
+.promo-slider .slide:nth-child(3)::before {
+  content: '03';
+}
+
+.slide .desc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 43px;
+}
+
+.slide .desc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 7px;
+  background-color: #fff;
+}
+
+.desc .promo {
+  order: 1;
+  margin: 0 0 19px;
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.desc .text {
+  order: 2;
+  margin-bottom: 42px;
+  color: #464646;
+}
+
+.desc .btn {
+  order: 3;
+  margin-bottom: 47px;
+  width: 220px;
+}
+
+.desc .properties {
+  order: 4;
+  border-collapse: collapse;
+}
+
+.properties td {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 36px;
+  letter-spacing: .01em;
+  line-height: 48px;
+}
+
+.properties th {
+  font-size: 13px;
+  letter-spacing: .01em;
+  line-height: 20px;
+  color: #464646;
 }
 
 .info {
@@ -503,7 +647,7 @@ ul.catalog-categories {
   display: flex;
   position: relative;
   padding-left: 36px;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 40px;
@@ -558,7 +702,6 @@ ul.catalog-categories {
   margin-right: 20px;
   padding-right: 20px;
   font-size: 14px;
-  letter-spacing: .01em;
   line-height: 24px;
 }
 
@@ -595,7 +738,7 @@ ul.catalog-categories {
   display: flex;
   align-content: center;
   margin: 0;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: .2em;
@@ -627,7 +770,6 @@ ul.catalog-categories {
   display: inline-block;
   margin-bottom: 4px;
   font: 700 18px/50px 'Gilroy', Arial, sans-serif;
-  letter-spacing: .01em;
 }
 
 .product-filter button[type='submit'] {
@@ -652,7 +794,6 @@ ul.catalog-categories {
   position: relative;
   padding-left: 39px;
   font-size: 14px;
-  letter-spacing: .01em;
   line-height: 40px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -761,7 +902,6 @@ ul.catalog-categories {
 
 .to-compare a {
   font-size: 13px;
-  letter-spacing: .01em;
   opacity: .5;
 }
 
@@ -778,20 +918,18 @@ ul.catalog-categories {
   left: 0;
   margin-right: 20px;
   width: 260px;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: .01em;
 }
 
 .product-price {
   order: 3;
   right: 0;
   width: 85px;
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   font-weight: 100;
-  letter-spacing: .01em;
   text-align: right;
 }
 
