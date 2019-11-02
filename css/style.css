@@ -350,7 +350,7 @@ h1,
   opacity: .3;
 }
 
-ul.catalog-categories {
+ul.nav-catalog-categories {
   display: flex;
   visibility: hidden;
   z-index: 1;
@@ -358,12 +358,12 @@ ul.catalog-categories {
   padding: 23px 60px 32px;
 }
 
-.catalog-link:hover + .catalog-categories,
-.catalog-categories:hover {
+.catalog-link:hover + .nav-catalog-categories,
+.nav-catalog-categories:hover {
   visibility: visible;
 }
 
-.catalog-categories,
+.nav-catalog-categories,
 .site-nav .add-bg-before::before {
   position: absolute;
   left: 0;
@@ -372,7 +372,7 @@ ul.catalog-categories {
   width: 100%;
 }
 
-.catalog-categories a {
+.nav-catalog-categories a {
   line-height: 36px;
 }
 
@@ -385,17 +385,17 @@ ul.catalog-categories {
   z-index: -1;
 }
 
-.catalog-categories .categories-column {
+.nav-catalog-categories .categories-column {
   margin: 0 20px;
   width: 160px;
 }
 
-.catalog-categories .categories-column:nth-child(1) {
+.nav-catalog-categories .categories-column:nth-child(1) {
   margin-left: 0;
   width: 200px;
 }
 
-.catalog-categories .categories-column:nth-child(5) {
+.nav-catalog-categories .categories-column:nth-child(5) {
   margin-right: 0;
   width: 200px;
 }
@@ -604,6 +604,93 @@ ul.catalog-categories {
   letter-spacing: .01em;
   line-height: 20px;
   color: #464646;
+}
+
+.catalog-categories ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-categories li {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 20px;
+  padding-top: 192px;
+  width: 160px;
+  height: 240px;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+.catalog-categories li:first-child {
+  margin-left: 0;
+}
+
+.catalog-categories li:last-child {
+  margin-right: 0;
+}
+
+.catalog-categories a {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.catalog-categories a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 160px;
+  background-color: rgba(240, 197, 46, .5);
+}
+
+.catalog-categories a::after {
+  content: '';
+  position: absolute;
+  top: calc(160px / 2);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.catalog-categories .vr::after {
+  width: 97px;
+  height: 55px;
+  background: url('../img/vr-glasses.svg') 0 0 no-repeat;
+}
+
+.catalog-categories .selfie-monopods::after {
+  top: 100px;
+  width: 86px;
+  height: 117px;
+  background: url('../img/selfie-monopod.svg') 0 0 no-repeat;
+}
+
+.catalog-categories .action-cams::after {
+  width: 71px;
+  height: 87px;
+  background: url('../img/action-camera.svg') 0 0 no-repeat;
+}
+
+.catalog-categories .smart-bands::after {
+  width: 107px;
+  height: 65px;
+  background: url('../img/smart-band.svg') 0 0 no-repeat;
+}
+
+.catalog-categories .smart-watches::after {
+  width: 56px;
+  height: 98px;
+  background: url('../img/smart-watch.svg') 0 0 no-repeat;
+}
+
+.catalog-categories .drones::after {
+  width: 132px;
+  height: 69px;
+  background: url('../img/drone.svg') 0 0 no-repeat;
 }
 
 .info {
