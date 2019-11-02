@@ -6,71 +6,75 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="catalog-page">
+  <body>
     <header class="page-header">
-      <nav class="page-nav container">
-        <a class="logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo-black.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
-        </a>
+      <div class="container">
+        <nav class="page-nav">
+          <a class="logo" href="index.html" aria-label="Перейти на главную страницу">
+            <img src="img/logo-black.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
+          </a>
 
-        <div class="first-row">
-          <form action="" method="get" class="search-form">
-            <label for="search" class="visually-hidden">Поиск по сайту</label>
-            <input type="text" id="search" name="q" placeholder="Поиск по сайту">
-            <button type="submit">Найти</button>
-          </form>
+          <div class="first-row">
+            <form action="" method="get" class="search-form">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+              <input type="text" id="search" name="q" placeholder="Поиск по сайту">
+              <button type="submit">Найти</button>
+            </form>
 
-          <ul class="nav user-nav">
-            <li class="user-account">
-              <ul>
-                <li class="user-nav-btn user-btn icon-before"><a href="">Валентин Петухов</a></li>
-                <li class="user-nav-btn logout-btn"><a href="">Выйти</a></li>
+            <ul class="nav user-nav">
+              <li class="user-account">
+                <ul>
+                  <li class="user-nav-btn user-btn icon-before"><a href="">Валентин Петухов</a></li>
+                  <li class="user-nav-btn logout-btn"><a href="">Выйти</a></li>
+                </ul>
+              </li>
+              <li class="user-nav-btn compare-btn icon-before"><a href="">Сравнить</a></li>
+              <li class="user-nav-btn cart-btn icon-before"><a href="">Корзина</a></li>
+            </ul>
+          </div>
+
+          <ul class="nav site-nav">
+            <li class="site-nav-el">
+              <a class="site-nav-lnk catalog-link" href="catalog.html">Каталог товаров</a>
+              <ul class="nav-catalog-categories">
+                <li class="categories-column">
+                  <ul>
+                    <li><a class="category" href="catalog.html">Виртуальная реальность</a></li>
+                    <li><a class="category" href="catalog.html">Моноподы для селфи</a></li>
+                    <li><a class="category" href="catalog.html">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+                <li class="categories-column">
+                  <ul>
+                    <li><a class="category" href="catalog.html">Фитнес-браслеты</a></li>
+                    <li><a class="category" href="catalog.html">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li class="categories-column">
+                  <ul>
+                    <li><a class="category" href="catalog.html">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li class="user-nav-btn compare-btn icon-before"><a href="">Сравнить</a></li>
-            <li class="user-nav-btn cart-btn icon-before"><a href="">Корзина</a></li>
+            <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
+            <li class="site-nav-el"><a class="site-nav-lnk" href="">Гарантия</a></li>
+            <li class="site-nav-el"><a class="site-nav-lnk" href="">Контакты</a></li>
           </ul>
-        </div>
-
-        <ul class="nav site-nav">
-          <li class="site-nav-el">
-            <a class="site-nav-lnk catalog-link" href="catalog.html">Каталог товаров</a>
-            <ul class="nav-catalog-categories">
-              <li class="categories-column">
-                <ul>
-                  <li><a class="category" href="catalog.html">Виртуальная реальность</a></li>
-                  <li><a class="category" href="catalog.html">Моноподы для селфи</a></li>
-                  <li><a class="category" href="catalog.html">Экшн-камеры</a></li>
-                </ul>
-              </li>
-              <li class="categories-column">
-                <ul>
-                  <li><a class="category" href="catalog.html">Фитнес-браслеты</a></li>
-                  <li><a class="category" href="catalog.html">Умные часы</a></li>
-                </ul>
-              </li>
-              <li class="categories-column">
-                <ul>
-                  <li><a class="category" href="catalog.html">Квадрокоптеры</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
-          <li class="site-nav-el"><a class="site-nav-lnk" href="">Гарантия</a></li>
-          <li class="site-nav-el"><a class="site-nav-lnk" href="">Контакты</a></li>
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <main class="stop-margin-collaps">
-      <div class="content-header container">
-        <h1>Моноподы для селфи</h1>
-        <ul class="bread-crumbs">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог товаров</a></li>
-          <li>Моноподы для селфи</li>
-        </ul>
+    <main class="catalog-page-content stop-margin-collaps">
+      <div class="container">
+        <div class="content-header">
+          <h1>Моноподы для селфи</h1>
+          <ul class="bread-crumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог товаров</a></li>
+            <li>Моноподы для селфи</li>
+          </ul>
+        </div>
       </div>
 
       <section class="container">
@@ -210,44 +214,46 @@
     </main>
 
     <footer class="page-footer">
-      <div class="footer-wrapper container">
-        <div class="footer-row">
-          <a class="logo" href="index.html">
-            <img src="img/logo-orange.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
-          </a>
-          
-          <ul class="nav user-nav">
-            <li class="user-account">
-              <ul>
-                <li class="user-nav-btn user-btn icon-before"><a class="user-nav-lnk" href="">Валентин Петухов</a></li>
-                <li class="user-nav-btn"><a class="user-nav-lnk logout-lnk" href="">Выйти</a></li>
-              </ul>
-            </li>
-            <li class="user-nav-btn compare-btn icon-before"><a class="user-nav-lnk" href="">Сравнить</a></li>
-            <li class="user-nav-btn cart-btn icon-before"><a class="user-nav-lnk" href="">Корзина</a></li>
-          </ul>
-        </div>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-row">
+            <a class="logo" href="index.html">
+              <img src="img/logo-orange.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
+            </a>
+            
+            <ul class="nav user-nav">
+              <li class="user-account">
+                <ul>
+                  <li class="user-nav-btn user-btn icon-before"><a class="user-nav-lnk" href="">Валентин Петухов</a></li>
+                  <li class="user-nav-btn"><a class="user-nav-lnk logout-lnk" href="">Выйти</a></li>
+                </ul>
+              </li>
+              <li class="user-nav-btn compare-btn icon-before"><a class="user-nav-lnk" href="">Сравнить</a></li>
+              <li class="user-nav-btn cart-btn icon-before"><a class="user-nav-lnk" href="">Корзина</a></li>
+            </ul>
+          </div>
 
-        <div class="footer-row">
-          <p class="address"><a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
+          <div class="footer-row">
+            <p class="address"><a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
 
-          <ul class="nav site-nav">
-            <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
-            <li class="site-nav-el"><a class="site-nav-lnk" href="">Гарантия</a></li>
-            <li class="site-nav-el"><a class="site-nav-lnk" href="">Контакты</a></li>
-          </ul>
+            <ul class="nav site-nav">
+              <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
+              <li class="site-nav-el"><a class="site-nav-lnk" href="">Гарантия</a></li>
+              <li class="site-nav-el"><a class="site-nav-lnk" href="">Контакты</a></li>
+            </ul>
 
-          <p class="phone">Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-        </div>
+            <p class="phone">Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+          </div>
 
-        <div class="footer-row">
-          <ul class="nav social-nav">
-            <li><a href="" class="facebook">Магазин «Девайс» в Фэйсбук</a></li>
-            <li><a href="" class="instagram">Магазин «Девайс» в Инстаграме</a></li>
-            <li><a href="" class="twitter">Магазин «Девайс» в Твитере</a></li>
-          </ul>
+          <div class="footer-row">
+            <ul class="nav social-nav">
+              <li><a href="" class="facebook">Магазин «Девайс» в Фэйсбук</a></li>
+              <li><a href="" class="instagram">Магазин «Девайс» в Инстаграме</a></li>
+              <li><a href="" class="twitter">Магазин «Девайс» в Твитере</a></li>
+            </ul>
 
-          <a class="author-nav" href="https://htmlacademy.ru/intensive/htmlcss">Интенсив «Профессиональный онлайн‑курс HTML и CSS, уровень 1» от HTML Academy</a>
+            <a class="author-nav" href="https://htmlacademy.ru/intensive/htmlcss">Интенсив «Профессиональный онлайн‑курс HTML и CSS, уровень 1» от HTML Academy</a>
+          </div>
         </div>
       </div>
     </footer>
