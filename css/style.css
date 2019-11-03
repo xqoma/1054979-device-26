@@ -140,12 +140,20 @@ h1,
 .search-form input[type='text']::placeholder {
   color: rgba(70, 70, 70, .3);
 }
+/* for Edge */
+.search-form input[type='text']::-ms-input-placeholder {
+  color: rgba(70, 70, 70, .3);
+}
 
 .search-form input[type='text']:hover::placeholder {
   color: rgba(70, 70, 70, .6);
 }
-/* IE11, Edge18 */
+/* IE11 */
 .search-form input[type='text']:hover {
+  color: rgba(70, 70, 70, .6);
+}
+/* for Edge */
+.search-form input[type='text']:hover::-ms-input-placeholder {
   color: rgba(70, 70, 70, .6);
 }
 
@@ -1603,4 +1611,151 @@ ul.nav-catalog-categories {
 
 .author-nav:active {
   opacity: .3;
+}
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 960px;
+  line-height: normal;
+  background-color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
+}
+
+.modal.closed {
+  display: none;
+}
+
+.modal .modal-close {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  transform: translate(50%, -50%);
+  background: none;
+  background: url('../img/modal-close.svg') 0 0 no-repeat;
+  opacity: .5;
+  width: 55px;
+  height: 55px;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.modal .modal-close:hover {
+  opacity: 1;
+}
+
+.modal .modal-close:active {
+  opacity: .3;
+}
+
+.modal.mail {
+  padding: 86px 100px 78px;
+}
+
+.mail form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mail .name,
+.mail .email {
+  padding-bottom: 27px;
+  width: 360px;
+}
+
+.mail .mail-text {
+  width: 100%;
+}
+
+.mail label {
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 38px;
+  letter-spacing: 0;
+}
+
+.mail input[type='text'],
+.mail input[type='email'],
+.mail textarea {
+  box-sizing: border-box;
+  border: none;
+  padding: 0 17px;
+  width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 18px;
+  background-color: rgba(229, 229, 229, .5);
+  border: 3px solid rgba(0, 0, 0, 0);
+  color: rgba(70, 70, 70, .4);
+}
+
+.mail input[type='text']::placeholder,
+.mail input[type='email']::placeholder,
+.mail textarea::placeholder {
+  color: rgba(70, 70, 70, .4);
+}
+
+/* for Chrome/Safari/Opera (Chrome issue https://bugs.chromium.org/p/chromium/issues/detail?id=623345) */
+.mail input[type='text']::-webkit-input-placeholder,
+.mail input[type='email']::-webkit-input-placeholder,
+.mail textarea::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, .4);
+}
+
+/* for Edge */
+.mail input[type='text']::-ms-input-placeholder,
+.mail input[type='email']::-ms-input-placeholder,
+.mail textarea::-ms-input-placeholder {
+  color: rgba(70, 70, 70, .4);
+}
+
+.mail input[type='text']:hover,
+.mail input[type='email']:hover,
+.mail textarea:hover {
+  background-color: rgba(229, 229, 229, .8);
+}
+
+.mail input[type='text']:focus,
+.mail input[type='email']:focus,
+.mail textarea:focus {
+  color: rgba(70, 70, 70, 1);
+  outline: none;
+  border: 3px solid rgba(240,197,46, .5);
+  background-color: rgba(229, 229, 229, 0);
+}
+
+.mail input[type='text']:not(:focus):invalid,
+.mail input[type='email']:not(:focus):invalid,
+.mail textarea:not(:focus):invalid {
+  background-color: rgba(237,181,181, .5);
+}
+
+/* Remove IE's "clear field" X button for input[type='text'] */
+.mail input[type='text']::-ms-clear,
+.mail input[type='email']::-ms-clear {
+  display: none;
+}
+
+.mail textarea {
+  padding-top: 13px;
+  padding-bottom: 14px;
+  margin-bottom: 37px;
+}
+
+.mail input[type='text'],
+.mail input[type='email'] {
+  height: 50px;
+}
+
+.mail .btn {
+  width: 200px;
 }

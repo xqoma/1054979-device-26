@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/services.js"></script>
+    <script src="js/modal-windows.js"></script>
   </head>
   <body class="main-page">
     <header class="page-header">
@@ -207,9 +208,9 @@
         <div class="container">
           <div class="services-inner">
             <ul class="tab-controls">
-              <li class="active"><button class="btn" id="delivery-btn" onclick="switchTab(this)">Доставка</button></li>
-              <li><button class="btn" id="warranty-btn" onclick="switchTab(this)">Гарантия</button></li>
-              <li><button class="btn" id="credit-btn" onclick="switchTab(this)">Кредит</button></li>
+              <li class="active"><button class="btn" type="button" id="delivery-btn" onclick="switchTab(this)">Доставка</button></li>
+              <li><button class="btn" type="button" id="warranty-btn" onclick="switchTab(this)">Гарантия</button></li>
+              <li><button class="btn" type="button" id="credit-btn" onclick="switchTab(this)">Кредит</button></li>
             </ul>
             <ul class="service-list">
               <li class="service delivery active" id="delivery-service">
@@ -279,10 +280,10 @@
               Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
               проверить работоспособность покупки. Всякое бывает.
             </p>
-            <a class="map-location" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
+            <a class="map-location" id="contactsMapLink" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
               <img class="map" src="img/map.jpg" width="560" height="222" alt="Магазин «Девайс» расположен по адресу г. Москва, ул. Строителей, 15">
             </a>
-            <a class="btn" href="">Напишите нам</a>
+            <a class="btn" id="contactsMailLink" href="">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -308,7 +309,7 @@
           </div>
 
           <div class="footer-row">
-            <p class="address"><a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
+            <p class="address"><a id="footerAddressLink" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
 
             <ul class="nav site-nav">
               <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
@@ -332,30 +333,32 @@
       </div>
     </footer>
 
-    <section style="display: none">
+    <section class="modal mail closed" id="mailModal">
       <h2 class="visually-hidden">Форма отправки письма работникам магазина «Девайс»</h2>
       <form action="" method="post">
-        <div>
+        <div class="name">
           <label for="message-name">Ваше имя:</label>
           <input type="text" id="message-name" name="name" placeholder="Имя Фамилия">
         </div>
-        <div>
+        <div class="email">
           <label for="message-email">Ваш e-mail:</label>
           <input type="email" id="message-email" name="email" placeholder="email@example.com">
         </div>
-        <label for="message-text">Текст письма:</label>
-        <textarea id="message-text" name="message" placeholder="В свободной форме"></textarea>
-        <input type="submit" value="Отправить">
+        <div class="mail-text">
+          <label for="message-text">Текст письма:</label>
+          <textarea id="message-text" name="message" rows="7" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="btn" type="submit">Отправить</button>
       </form>
-      <button>Закрыть</button>
+      <button class="modal-close" type="button" onclick="closeModal(this)">Закрыть</button>
     </section>
 
-    <section style="display: none">
+    <section class="modal closed" id="mapModal">
       <h2 class="visually-hidden">Адрес расположения магазина «Девайс»</h2>
       <a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
         <img src="img/map-big.jpg" width="960" height="559" alt="Магазин «Девайс» расположен по адресу г. Москва, ул. Строителей, 15">
       </a>
-      <button>Закрыть</button>
+      <button class="modal-close" type="button" onclick="closeModal(this)">Закрыть</button>
     </section>
   </body>
 </html>
