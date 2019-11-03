@@ -1015,6 +1015,8 @@ ul.nav-catalog-categories {
 }
 
 .sort-bar {
+  position: absolute;
+  width: 100%;
   min-width: 1200px;
   background-color: rgba(0, 0, 0, .08);
 }
@@ -1098,8 +1100,22 @@ ul.nav-catalog-categories {
   background: url('../img/arrow-down.svg') 0 0 no-repeat;
 }
 
+.catalog-body {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, .08) 50%, rgba(255, 255, 255, 0) 50% );
+}
+
+.catalog-body-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
 .product-filter {
   width: 200px;
+}
+
+.product-filter .sort-bar-header {
+  margin-bottom: 69px;
 }
 
 .product-filter .filter-group {
@@ -1183,8 +1199,18 @@ ul.nav-catalog-categories {
   background: url('../img/radio-on.svg') 0 0 no-repeat;
 }
 
+.products {
+  padding-top: 70px;
+  padding-left: 72px;
+  width: 760px;
+  background-color: #fff;
+}
+
 .product-list {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 69px 0 0;
   padding-left: 0;
   list-style-type: none;
 }
