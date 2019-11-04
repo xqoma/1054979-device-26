@@ -1267,6 +1267,10 @@ ul.nav-catalog-categories {
   cursor: pointer;
 }
 
+.range-controls .toggle:active {
+  transform: translateX(-50%) scale(1.1, 1.1);
+}
+
 .range-controls .toggle-min {
   left: 0;
 }
