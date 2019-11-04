@@ -1224,16 +1224,84 @@ ul.nav-catalog-categories {
 
 .product-filter legend {
   display: inline-block;
-  margin-bottom: 4px;
-  font: 700 18px/50px 'Gilroy', Arial, sans-serif;
+  margin-bottom: 6px;
+  font: 700 18px/48px 'Gilroy', Arial, sans-serif;
 }
 
 .product-filter button[type='submit'] {
   width: 100%;
 }
 
+.range-filter {
+  margin: 17px 0 26px;
+}
+
+.range-controls {
+  position: relative;
+  margin-left: 5px;
+  padding-bottom: 8px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 58%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 113px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  opacity: .2;
+}
+
+.price-controls label,
+.price-controls input {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.price-controls input {
+  display: inline-block;
+  width: 72px;
+  border: none;
+  background: none;
+}
+
 .filter-list {
-  margin: 0 0 32px;
+  margin: 0 0 31px;
   padding: 0;
   list-style-type: none;
 }
