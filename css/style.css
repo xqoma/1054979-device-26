@@ -1385,6 +1385,37 @@ ul.nav-catalog-categories {
   margin-bottom: 46px;
 }
 
+
+.product-new::before,
+.product-new::after {
+  content: '';
+  position: absolute;
+  top: 28px;
+  right: 26px;
+  width: 57px;
+}
+
+.product-new::before {
+  z-index: 1;
+  content: 'New';
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: .05em;
+  color: rgba(0, 0, 0, .15);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 57px;
+  transform: translate(-1px, 3px) scaleY(1.1);
+}
+
+.product-new::after {
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-radius: 50%;
+  height: 57px;
+}
+
 .photo-wrapper {
   position: relative;
   order: 1;
@@ -1393,6 +1424,7 @@ ul.nav-catalog-categories {
 .photo-wrapper::before {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -1416,6 +1448,7 @@ ul.nav-catalog-categories {
 
 .product-btns {
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
