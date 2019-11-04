@@ -2,18 +2,24 @@ window.onload = function() {
   const contactsMailLink = document.getElementById('contactsMailLink'),
         contactsMapLink = document.getElementById('contactsMapLink'),
         footerAddressLink = document.getElementById('footerAddressLink');
-  
-  contactsMailLink.onclick = function() {
-    openModal('mailModal');
-    return false;
+
+  if (contactsMailLink) {
+    contactsMailLink.onclick = function() {
+      openModal('mailModal');
+      return false;
+    }
   }
-  contactsMapLink.onclick = function() {
-    openModal('mapModal');
-    return false;
+  if (contactsMapLink) {
+    contactsMapLink.onclick = function() {
+      openModal('mapModal');
+      return false;
+    }
   }
-  footerAddressLink.onclick = function() {
-    openModal('mapModal');
-    return false;
+  if (footerAddressLink) {
+    footerAddressLink.onclick = function() {
+      openModal('mapModal');
+      return false;
+    }
   }
 }
 
