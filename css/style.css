@@ -1868,21 +1868,95 @@ ul.nav-catalog-categories {
   opacity: .3;
 }
 
+@keyframes popup-open {
+  0% {
+    transform: translate(
+      -50%,
+      calc(-50% + -2000px)
+    );
+  }
+
+  70% {
+    transform: translate(
+      -50%,
+      calc(-50% + 30px)
+    );
+  }
+
+  90% {
+    transform: translate(
+      -50%,
+      calc(-50% + -10px)
+    );
+  }
+
+  100% {
+    transform: translate(
+      -50%,
+      -50%
+    );
+  }
+}
+
+@keyframes popup-close {
+  0% {
+    transform: translate(
+      -50%,
+      -50%
+    );
+  }
+
+  10% {
+    transform: translate(
+      -50%,
+      calc(-50% + -10px)
+    );
+  }
+
+  30% {
+    transform: translate(
+      -50%,
+      calc(-50% + 30px)
+    );
+  }
+
+  100% {
+    transform: translate(
+      -50%,
+      calc(-50% + -2000px)
+    );
+  }
+}
+
 .modal {
+  display: none;
+
   position: fixed;
   z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   box-sizing: border-box;
   width: 960px;
+
   line-height: normal;
+  
   background-color: #fff;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
 }
 
-.modal.closed {
-  display: none;
+.modal-show {
+  display: block;
+  animation: popup-open 0.6s;
+}
+
+.modal-pre-closed {
+  animation: popup-close 0.6s;
+  transform: translate(
+    -50%,
+    calc(-50% + -2000px)
+  );
 }
 
 .modal .modal-close {

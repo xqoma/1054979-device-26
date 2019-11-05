@@ -5,8 +5,6 @@
     <title>Магазин «Девайс»</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/services.js"></script>
-    <script src="js/modal-windows.js"></script>
   </head>
   <body class="main-page">
     <header class="page-header">
@@ -208,12 +206,12 @@
         <div class="container">
           <div class="services-inner">
             <ul class="tab-controls">
-              <li class="tab active"><button class="btn" type="button" id="delivery-btn" onclick="switchTab(this)">Доставка</button></li>
-              <li class="tab"><button class="btn" type="button" id="warranty-btn" onclick="switchTab(this)">Гарантия</button></li>
-              <li class="tab"><button class="btn" type="button" id="credit-btn" onclick="switchTab(this)">Кредит</button></li>
+              <li class="tab active"><button class="btn" id="delivery-btn" type="button">Доставка</button></li>
+              <li class="tab"><button class="btn" id="warranty-btn" type="button">Гарантия</button></li>
+              <li class="tab"><button class="btn" id="credit-btn" type="button">Кредит</button></li>
             </ul>
             <ul class="service-list">
-              <li class="service delivery active" id="delivery-service">
+              <li class="service delivery active">
                 <h3 class="header">Доставка</h3>
                 <p class="text">
                   Мы с удовольствием доставим ваш товар прямо к вашему
@@ -222,7 +220,7 @@
                 </p>
               </li>
 
-              <li class="service warranty" id="warranty-service">
+              <li class="service warranty">
                 <h3 class="header">Гарантия</h3>
                 <p class="text">
                   Если из-за возгорания купленного у нас товара у вас 
@@ -231,7 +229,7 @@
                 </p>
               </li>
 
-              <li class="service credit" id="credit-service">
+              <li class="service credit">
                 <h3 class="header">Кредит</h3>
                 <p class="text">
                   Залезть в долговую яму стало проще! Кредитные
@@ -282,10 +280,10 @@
               Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
               проверить работоспособность покупки. Всякое бывает.
             </p>
-            <a class="map-location" id="contactsMapLink" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
+            <a class="map-location" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
               <img class="map" src="img/map.jpg" width="560" height="222" alt="Магазин «Девайс» расположен по адресу г. Москва, ул. Строителей, 15">
             </a>
-            <a class="btn" id="contactsMailLink" href="">Напишите нам</a>
+            <a class="btn mail-link" href="">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -311,7 +309,7 @@
           </div>
 
           <div class="footer-row">
-            <p class="address"><a id="footerAddressLink" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
+            <p class="address"><a class="address-link" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
 
             <ul class="nav site-nav">
               <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
@@ -335,7 +333,7 @@
       </div>
     </footer>
 
-    <section class="modal mail closed" id="mailModal">
+    <section class="modal mail">
       <h2 class="visually-hidden">Форма отправки письма работникам магазина «Девайс»</h2>
       <form action="https://echo.htmlacademy.ru/" method="post">
         <div class="name">
@@ -352,15 +350,17 @@
         </div>
         <button class="btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button" onclick="closeModal(this)">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
-    <section class="modal map closed" id="mapModal">
+    <section class="modal map">
       <h2 class="visually-hidden">Адрес расположения магазина «Девайс»</h2>
       <a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
         <img src="img/map-big.jpg" width="960" height="559" alt="Магазин «Девайс» расположен по адресу г. Москва, ул. Строителей, 15">
       </a>
-      <button class="modal-close" type="button" onclick="closeModal(this)">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -5,7 +5,6 @@
     <title>Моноподы для селфи</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/modal-windows.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -255,7 +254,7 @@
           </div>
 
           <div class="footer-row">
-            <p class="address"><a id="footerAddressLink" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
+            <p class="address"><a class="address-link" href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">г. Москва, ул. Строителей, 15</a></p>
 
             <ul class="nav site-nav">
               <li class="site-nav-el"><a class="site-nav-lnk" href="">Доставка</a></li>
@@ -279,12 +278,14 @@
       </div>
     </footer>
 
-    <section class="modal map closed" id="mapModal">
+    <section class="modal map" id="mapModal">
       <h2 class="visually-hidden">Адрес расположения магазина «Девайс»</h2>
       <a href="https://goo.gl/maps/fPUwSftCcj3sVYiC8">
         <img src="img/map-big.jpg" width="960" height="559" alt="Магазин «Девайс» расположен по адресу г. Москва, ул. Строителей, 15">
       </a>
       <button class="modal-close" type="button" onclick="closeModal(this)">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
