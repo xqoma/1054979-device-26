@@ -267,16 +267,12 @@ h1,
 
 .user-nav-btn.icon-before::before {
   content: '';
+
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
   pointer-events: none;
-}
-
-.page-header .user-nav-btn.icon-before::before {
-  bottom: 9px;
-}
-
-.page-footer .user-nav-btn.icon-before::before {
-  bottom: 12px;
 }
 
 .user-btn.icon-before::before {
@@ -1726,7 +1722,7 @@ ul.nav-catalog-categories {
 }
 
 .page-footer p.phone {
-  text-align: end;
+  text-align: right;
 }
 
 .page-footer .user-nav-lnk {
