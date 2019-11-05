@@ -1300,13 +1300,13 @@ ul.nav-catalog-categories {
 
 .range-filter {
   padding-top: 18px;
-  margin-bottom: 26px;
+  margin-bottom: 32px;
 }
 
 .range-controls {
   position: relative;
   margin-left: 5px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
 }
 
 .range-controls .scale {
@@ -1346,13 +1346,8 @@ ul.nav-catalog-categories {
   left: 113px;
 }
 
-.price-controls {
-  font-size: 0;
-}
-
 .price-controls label {
   display: inline-block;
-  opacity: .2;
 }
 
 .price-controls label,
@@ -1362,11 +1357,14 @@ ul.nav-catalog-categories {
   font-weight: 100;
   line-height: 24px;
   letter-spacing: 0;
+  height: 21px;
+  padding: 0;
+  color: rgba(0, 0, 0, .2);
 }
 
 .price-controls input {
   display: inline-block;
-  width: 72px;
+  width: 68px;
   border: none;
   background: none;
 }
