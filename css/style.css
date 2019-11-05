@@ -61,7 +61,7 @@ a {
 
 h1,
 .main-page h2 {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 700;
@@ -165,7 +165,7 @@ h1,
   color: rgba(70, 70, 70, 1);
 }
 
-/* Remove IE's "clear field" X button for input[type='text'] */
+/* Remove IE's clear field X button for input[type='text'] */
 .search-form input[type='text']::-ms-clear {
   display: none;
 }
@@ -1960,7 +1960,7 @@ ul.nav-catalog-categories {
   background-color: rgba(237,181,181, .5);
 }
 
-/* Remove IE's "clear field" X button for input[type='text'] */
+/* Remove IE's clear field X button for input[type='text'] */
 .modal.mail input[type='text']::-ms-clear,
 .modal.mail input[type='email']::-ms-clear {
   display: none;
