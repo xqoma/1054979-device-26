@@ -873,11 +873,11 @@ ul.nav-catalog-categories {
   width: 160px;
 }
 
-.tab-controls .active .btn {
+.tab.active .btn {
   color: #f7e184;
 }
 
-.tab-controls .active .btn::before {
+.tab.active .btn::before {
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -969,15 +969,15 @@ ul.nav-catalog-categories {
   line-height: 0;
 }
 
-.brands li img {
+.brand img {
   opacity: 0;
 }
 
-.brands li:hover img {
+.brand:hover img {
   opacity: 1;
 }
 
-.brands li::after {
+.brand::after {
   content: '';
   position: absolute;
   top: 0;
@@ -987,7 +987,7 @@ ul.nav-catalog-categories {
   opacity: .2;
 }
 
-.brands li:hover::after {
+.brand:hover::after {
   opacity: 0;
 }
 
