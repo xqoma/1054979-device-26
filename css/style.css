@@ -617,7 +617,7 @@ ul.nav-catalog-categories {
   margin-top: 39px;
   margin-left: auto;
   padding-top: 42px;
-  padding-right: 60px;
+  padding-right: 65px;
   width: 560px;
 }
 
@@ -666,15 +666,15 @@ ul.nav-catalog-categories {
 }
 
 .properties .col-1 {
-  width:160px;
+  width: 160px;
 }
 
 .properties .col-2 {
-  width:140px;
+  width: 140px;
 }
 
 .properties .col-3 {
-  width:200px;
+  width: 180px;
 }
 
 .properties td {
@@ -888,7 +888,7 @@ ul.nav-catalog-categories {
 .services .service-list {
   margin: 0;
   padding: 74px 0 0;
-  width: 460px;
+  width: 435px;
   list-style-type: none;
 }
 
@@ -1036,6 +1036,7 @@ ul.nav-catalog-categories {
 
 .info p {
   margin: 0 0 30px;
+  width: 510px;
   line-height: 30px;
   letter-spacing: 0;
   color: #464646;
@@ -1584,6 +1585,10 @@ ul.nav-catalog-categories {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .product-price {
