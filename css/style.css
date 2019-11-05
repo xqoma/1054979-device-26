@@ -354,6 +354,7 @@ h1,
 
 .site-nav-lnk {
   display: inline-block;
+  vertical-align: top;
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -1301,13 +1302,13 @@ ul.nav-catalog-categories {
 
 .range-filter {
   padding-top: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .range-controls {
   position: relative;
   margin-left: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 .range-controls .scale {
@@ -1349,6 +1350,7 @@ ul.nav-catalog-categories {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .price-controls label,
@@ -1364,7 +1366,6 @@ ul.nav-catalog-categories {
 }
 
 .price-controls input {
-  display: inline-block;
   width: 68px;
   border: none;
   background: none;
@@ -1899,6 +1900,7 @@ ul.nav-catalog-categories {
 
 .modal.mail label {
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 7px;
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 700;
