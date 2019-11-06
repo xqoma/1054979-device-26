@@ -1971,6 +1971,7 @@ ul.nav-catalog-categories {
 .modal .modal-close {
   display: block;
   position: absolute;
+  z-index: 3;
   top: 50px;
   right: 50px;
   transform: translate(50%, -50%);
@@ -2100,6 +2101,30 @@ ul.nav-catalog-categories {
 
 .modal.mail .btn {
   width: 200px;
+}
+
+.modal.map iframe {
+  display: block;
+
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  border: none;
+  width: 100%;
+  height: 559px;
+}
+
+.modal.map a {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.modal.map img {
+  background-color: #e9e9e9;
 }
 
 .modal.map img {

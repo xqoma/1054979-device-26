@@ -11,10 +11,12 @@ window.onload = function() {
   runPopupLogic(footerAddressLink, '.modal.map');
 
   function runPopupLogic(triggerEl, popupSelector) {
-    triggerEl.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      openPopup(popupSelector);
-    });
+    if (triggerEl) {
+      triggerEl.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        openPopup(popupSelector);
+      });
+    }
 
     function openPopup(popupSelector) {
       const popup = document.querySelector(popupSelector);
@@ -60,6 +62,8 @@ window.onload = function() {
   runServiceSliderLogic(creditTabBtn);
 
   function runServiceSliderLogic(tabBtn) {
+    if (!tabBtn) return;
+
     tabBtn.addEventListener('click', function(evt) {
       evt.preventDefault();
 
